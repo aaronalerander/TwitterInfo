@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 // When the extension is installed or upgraded ...
-console.log("background");
+console.log("background file activated -background");
 chrome.runtime.onInstalled.addListener(function () {
   // Replace all rules ...
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
