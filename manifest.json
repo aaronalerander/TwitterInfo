@@ -21,7 +21,8 @@
     "activeTab",
     "tabs",
     "identity",
-    "identity.email"
+    "identity.email",
+    "storage"
   ],
   "icons": {},
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Aoq9hE5wsHfSeUBUINghuGfqHBqJ9vX2yKwLntDuIxGzdyOYUDci4UeDOZCxs6KizC7uQH9x9MVKaKZsXvcle0F1Vmfa1p5M6ddhf3ivxTPCQxS1plh1W5FphfC53wuF4HG3rUGztVWuAGc8IszC/cZoua/7GGU5sY0j+2UGxPN303hmWVObY59GOQVlHRLEKhVuaar9H1XGRJ9zA6mVewwhGBu3jNzKh5MxSUkxk0DIHP0DceA/S5PrmYPyn2eG1kr/lDXZebZii8BG1uLsomr6z951pwyUIFTu1Ae/qfJpEgKu4qgd42q9+G0N1DZ4i60+xUAabWnK4qgMJqkKQIDAQAB",
