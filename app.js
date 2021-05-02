@@ -1,20 +1,28 @@
-// Called when the user clicks on the browser action.
-main = document.getElementById("text");
-button = document.getElementById("startButton");
-
-button.onclick = (event) => {
-  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-    var activeTab = tabs[0];
-    chrome.tabs.sendMessage(activeTab.id, { command: "openModal" });
-  });
-};
+const HOME_PAGE = "https://twitter.com/home";
+textBody = document.getElementById("textBody");
+addProfileButton = document.getElementById("addProfileButton");
 
 chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
   var activeTab = tabs[0];
-  console.log(activeTab);
   currentTab = activeTab.url;
-  if (currentTab.includes("https://twitter.com/home")) {
-    main.innerHTML = "New need to be on a user profile to activate";
-    button.disabled = true;
+  if (currentTab.includes(HOME_PAGE)) {
+    addProfileButton.disabled = true;
+    textBody.innerHTML =
+      "Navigate to user profile page to add their data to your google sheet";
   }
 });
+
+addProfileButton.onclick = () => {
+  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
+    var activeTab = tabs[0];
+
+    chrome.identity.getAuthToken({ interactive: true }, function (auth_token) {
+      sheetId = document.getElementById("sheetId").value;
+      chrome.tabs.sendMessage(activeTab.id, {
+        command: "addProfileData",
+        sheetId,
+        auth_token,
+      });
+    });
+  });
+};
