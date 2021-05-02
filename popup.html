@@ -6,9 +6,11 @@
             height: 200px;
             width: 600px;
         }
-        div{
-            align-items: center;
+        .center {
+            text-align: center;
+            margin: auto;
         }
+
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,14 +18,19 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="center">
     <div>
-    <div>
-        <h1>This is an extension to store twitter profile info in google sheets</h1>
+        <h3>This is an extension to store twitter profile info in google sheets</h3>
         <input type="text" id="sheetId" placeholder="google sheet id">
-        <button id="addProfileButton">Add Proile to Google Sheet</button>
+        <button id="setEndPointButton">Make this google sheets id my endpoint</button>
+
     </div>
     <dir>
-        <h1 id="textBody"></h1>
+       
+        <h4>Your current endpoint url is </h4>
+        <h4 id="currentEndPointId"></h4>  
+        <button id="addProfileButton">Add Proile to Google Sheet</button>
+        <h3 style="color: red;" id="errorMessage"></h3>
     </dir>
 </div>
     <script src="app.js"></script>
