@@ -1,0 +1,22 @@
+{
+  "name": "Twitter Info",
+  "version": "1.0",
+  "description": "Shows a page action for urls which have the letter 'g' in them.",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_title": "There's a 'G' in this URL!",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["declarativeContent", "activeTab", "tabs"],
+  "icons": {},
+  "manifest_version": 2
+}
