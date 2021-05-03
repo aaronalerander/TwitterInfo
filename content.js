@@ -1,4 +1,3 @@
-const API_KEY = "AIzaSyCWpqblmvvYxq9pNKPbeAHfK5-_UkdwxVU";
 let user_signed_in = false; //*****not sure if i need this */
 
 /*chrome.extension.sendMessage({}, function (response) {
@@ -56,9 +55,13 @@ collectData = () => {
     "css-901oao r-1fmj7o5 r-1qd0xha r-adyw6z r-1vr29t4 r-135wba7 r-bcqeeo r-1udh08x r-qvutc0"
   )[0].firstChild.innerText;
 
+  /*let handel = document.getElementsByClassName(
+    "css-901oao css-bfa6kz r-9ilb82 r-18u37iz r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
+  )[0].innerText;*/
+
   let handel = document.getElementsByClassName(
     "css-901oao css-bfa6kz r-9ilb82 r-18u37iz r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
-  )[0].innerText;
+  )[1].innerText;
 
   let followers = document.getElementsByClassName(
     "css-901oao css-16my406 r-1fmj7o5 r-poiln3 r-b88u0q r-bcqeeo r-qvutc0"
@@ -66,7 +69,11 @@ collectData = () => {
 
   bioHtmlArray = document.getElementsByClassName(
     "css-901oao r-1fmj7o5 r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
-  )[1].children;
+  )[2].children;
+
+  /**  bioHtmlArray = document.getElementsByClassName(
+    "css-901oao r-1fmj7o5 r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
+  )[1].children; */
 
   let bio = "";
 
