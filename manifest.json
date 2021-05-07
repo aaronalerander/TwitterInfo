@@ -1,13 +1,14 @@
 {
   "name": "Twitter Info",
   "version": "1.0",
-  "description": "Shows a page action for urls which have the letter 'g' in them.",
+  "description": "Sends twitter profile user data to a google sheet endpoint",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
   },
   "page_action": {
-    "default_title": "There's a 'G' in this URL!",
+    "default_icon": "icon.png",
+    "default_title": "Tweet To Sheet",
     "default_popup": "popup.html"
   },
   "content_scripts": [
