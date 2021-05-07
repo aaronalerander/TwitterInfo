@@ -1,38 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <style>
-        body{
-            height: 200px;
-            width: 600px;
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+      <title>Hello, world!</title>
+      <style>
+         body{
+         height: 400px;
+         width: 500px;
+         }
+         .center {
+         height: 350px;
+         width: 400px;
+         text-align: center;
+         text-justify: auto; 
+         margin: auto;
+         margin-top: 40px;
+         }
+         .border-box{
+         border: 1px solid black;
+         padding: 10px;
+         border-radius: 10px;
+         margin-bottom: 25px;
+         margin-top: 25px;
+         }
+         .inline-block-child {
+        display: inline-block;
         }
-        .center {
-            text-align: center;
-            margin: auto;
-        }
+      </style>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <body>
+      <div class="center">
 
-    </style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="center">
-    <div>
-        <h3>This is an extension to store twitter profile info in google sheets!</h3>
-        <input type="text" id="sheetId" placeholder="google sheet id">
-        <button id="setEndPointButton">Make this google sheets id my endpoint</button>
+        <div class="parent" >
+            <img src="tweeter.jpg" style="padding-bottom: 10px;">
+            <h1 class="child inline-block-child" style="color: #1DA1F2; font-weight: bold;">Tweet</h3>
+            <h1 class="child inline-block-child">To</h3>
+            <h1 class="child inline-block-child" style="color: #20A464; font-weight: bold; ">Sheet</h3>
+            <img src="sheets.jpg" style="padding-bottom: 10px;">
+        </div>
 
-    </div>
-    <dir>
-       
-        <h4>Your current endpoint url is </h4>
-        <h4 id="currentEndPointId"></h4>  
-        <button id="addProfileButton">Add Profile to Google Sheet</button>
-        <h3 style="color: red;" id="errorMessage"></h3>
-    </dir>
-</div>
-    <script src="app.js"></script>
-</body>
+
+
+         <div class="input-group mb-3 mt-3">
+            <input id="sheetId" type="text"  class="form-control" placeholder="Enter Your Google Sheets Id" aria-label="Enter Your Google Sheets Id" aria-describedby="button-addon2">
+            <button id="setEndPointButton" class="btn btn-primary" type="button" >Set Google Sheet</button>
+         </div>
+         <div class="border-box">
+            <h6>Your Current Google Sheet Endpoint Id Is</h6>
+            <h7 id="currentEndPointId" style="color: #20A464;"></h7>
+         </div>
+         <button id="addProfileButton" type="button" class="btn btn-primary">Click To Tweet To Sheet</button>
+         <H6 style="color: #DC3545; font-weight: bold; margin-top: 25px;" id="errorMessage"></H6>
+         <!-- <H6>hellow</H6> -->
+      </div>
+      <script src="app.js"></script>
+   </body>
 </html>

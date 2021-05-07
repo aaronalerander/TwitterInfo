@@ -16,7 +16,7 @@ chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
   if (currentTab.includes(HOME_PAGE)) {
     addProfileButton.disabled = true;
     textBody.innerHTML =
-      "Navigate to a users profile page to add their data to your google sheet!!!!";
+      "Navigate to a user profile to send profile data to your google sheet!";
   }
 });
 
@@ -37,6 +37,8 @@ addProfileButton.onclick = () => {
     chrome.identity.getAuthToken({ interactive: true }, function (auth_token) {
       chrome.storage.local.get(["sheetId"], function (result) {
         sheetId = result.sheetId;
+
+        textBody.innerHTML = "Data Sent To Your Google Sheet!";
 
         chrome.tabs.sendMessage(activeTab.id, {
           command: "addProfileData",
