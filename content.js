@@ -32,9 +32,6 @@ sendToSheet = (sheetId, auth_token, twitterInfo) => {
   };
 
   fetch(url, fetchOptions).then((res) => res.json());
-  //.then((res) => console.log(res));
-
-  //console.log("here");
 };
 
 collectData = () => {
