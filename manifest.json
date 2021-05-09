@@ -31,7 +31,7 @@
     "client_id": "208313155573-ed4sjbuflsi9qb6bjflgrmgovf1s4hdk.apps.googleusercontent.com",
     "scopes": [
       "profile email",
-      //"https://www.googleapis.com/auth/"
+      //"https://www.googleapis.com/auth/"  removed later
       //"https://www.googleapis.com/auth/drive",
       "https://www.googleapis.com/auth/spreadsheets"
     ]
