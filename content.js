@@ -51,13 +51,13 @@ collectData = () => {
     "css-901oao css-16my406 r-1fmj7o5 r-poiln3 r-b88u0q r-bcqeeo r-qvutc0"
   )[1].innerText;
 
-  // bioHtmlArray = document.getElementsByClassName(
-  //   "css-901oao r-1fmj7o5 r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
-  // )[2].children;
-
-  let bioHtmlArray = document.getElementsByClassName(
+  bioHtmlArray = document.getElementsByClassName(
     "css-901oao r-1fmj7o5 r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
-  )[1].children;
+  )[2].children;
+
+  // let bioHtmlArray = document.getElementsByClassName(
+  //   "css-901oao r-1fmj7o5 r-1qd0xha r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"
+  // )[1].children;
 
   let bio = "";
 
