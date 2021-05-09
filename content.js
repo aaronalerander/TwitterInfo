@@ -77,13 +77,3 @@ collectData = () => {
 
   return object;
 };
-
-/*chrome.extension.sendMessage({}, function (response) {
-  let flag = false;
-  while (flag === false) {
-    if (document.readyState === "complete") {
-      flag = true;
-      console.log("Hello. This message was sent from content.js");
-    }
-  }
-});*/
